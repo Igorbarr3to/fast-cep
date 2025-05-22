@@ -4,6 +4,8 @@ Bem-vindo ao FastCEP! Uma aplicação web ágil e moderna para consulta de ender
 
 Este projeto foi desenvolvido como uma prática para o consumo de APIs, utilizando tecnologias modernas de front-end.
 
+Link do deploy: https://fast-cep.vercel.app/
+
 ## ✨ Funcionalidades
 
 * **Consulta de CEP:** Insira um CEP de 8 dígitos e obtenha os detalhes do endereço correspondente.
