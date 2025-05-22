@@ -1,54 +1,83 @@
-# React + TypeScript + Vite
+# FastCEP 🚀
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Bem-vindo ao FastCEP! Uma aplicação web ágil e moderna para consulta de endereços brasileiros através do CEP (Código de Endereçamento Postal).
 
-Currently, two official plugins are available:
+Este projeto foi desenvolvido como uma prática para o consumo de APIs, utilizando tecnologias modernas de front-end.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Funcionalidades
 
-## Expanding the ESLint configuration
+* **Consulta de CEP:** Insira um CEP de 8 dígitos e obtenha os detalhes do endereço correspondente.
+* **Exibição Detalhada:** Mostra informações como logradouro, bairro, cidade, UF, DDD e IBGE.
+* **Validação de Entrada:** Verifica se o CEP inserido possui 8 dígitos numéricos.
+* **Feedback Visual:** Indicador de carregamento durante a busca do CEP.
+* **Tratamento de Erros Amigável:**
+    * Mensagens claras para CEP não encontrado ou erros na consulta.
+    * As mensagens de erro são exibidas por 3 segundos e, em seguida, o campo de CEP é limpo automaticamente.
+* **Limpeza Automática de Endereço:** Se o campo de CEP for esvaziado, os dados do endereço consultado anteriormente desaparecem da tela.
+* **Interface Responsiva:** Construído com Tailwind CSS para uma boa experiência em diferentes tamanhos de tela.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+## 🛠️ Tecnologias Utilizadas
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+* **React:** Biblioteca JavaScript para construção de interfaces de usuário.
+* **Vite:** Ferramenta de build moderna e rápida para desenvolvimento front-end.
+* **Tailwind CSS:** Framework CSS utility-first para estilização rápida e customizável.
+* **TypeScript:** Superset do JavaScript que adiciona tipagem estática.
+* **Axios:** Cliente HTTP baseado em Promises para realizar chamadas à API.
+* **API ViaCEP:** Utilizada como fonte para os dados de endereço.
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 🏁 Como Rodar o Projeto Localmente
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Siga estas instruções para configurar e rodar o projeto em sua máquina local.
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+### Pré-requisitos
+
+* [Node.js](https://nodejs.org/) (versão 18.x ou superior recomendada)
+* [NPM](https://www.npmjs.com/) ou [Yarn](https://yarnpkg.com/)
+
+### Instalação
+
+1.  **Clone o repositório:**
+    ```bash
+    git clone https://github.com/Igorbarr3to/fast-cep.git
+    cd fastcep 
+    ```
+
+2.  **Instale as dependências:**
+    Usando npm:
+    ```bash
+    npm install
+    ```
+    Usando pnpm:
+    ```bash
+    pnpm install
+    ```
+    Ou usando Yarn:
+    ```bash
+    yarn install
+    ```
+
+3.  **Inicie o servidor de desenvolvimento:**
+    Usando npm:
+    ```bash
+    npm run dev
+    ```
+    Usando pnpm:
+    ```bash
+    pnpm install
+    ```
+    Ou usando Yarn:
+    ```bash
+    yarn dev
+    ```
+
+4.  Abra seu navegador e acesse `http://localhost:5173` (ou a porta indicada pelo Vite no seu terminal).
+
+## 🚀 Como Usar
+
+1.  Digite um CEP brasileiro válido (8 dígitos numéricos) no campo indicado.
+2.  Clique no botão "Consultar".
+3.  Se o CEP for válido e encontrado, os detalhes do endereço serão exibidos abaixo.
+4.  Em caso de erro (CEP inválido, não encontrado ou falha na API), uma mensagem de erro será exibida por 3 segundos, e o campo de CEP será limpo.
+5.  Se você limpar o campo de CEP manualmente, qualquer endereço exibido anteriormente desaparecerá.
+
+Feito para praticar e aprender!
