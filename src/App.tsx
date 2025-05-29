@@ -64,12 +64,15 @@ function App() {
   }, [cep]);
 
   return (
-    <main className='flex flex-col items-center justify-center min-h-screen bg-white'>
-      <header className='fixed top-0 text-center w-full  p-4 shadow-md'>
+    <main
+      className="flex flex-col items-center justify-center min-h-screen bg-cover bg-center"
+      style={{ backgroundImage: "url('/bg-map.png')" }}
+    >
+      <header className='fixed top-0 bg-zinc-100 text-center w-full  p-4 shadow-md'>
         <h1 className='text-3xl font-bold text-gray-800 mb-4'>FastCEP</h1>
         <p className='text-gray-600 mb-4'>Consulte um endereço através do CEP de forma rápida!</p>
       </header>
-      <form className='flex flex-col w-max-sm bg-gray-400 p-6 rounded-lg shadow-2xl shadow-neutral-500 text-gray-800'>
+      <form className='flex flex-col w-sm bg-gray-400 p-6 rounded-lg shadow-2xl shadow-neutral-500 text-gray-800 border border-zinc-50'>
         <label htmlFor='cep' className='font-semibold'>CEP (apenas números)</label>
         <input
           type='text'
